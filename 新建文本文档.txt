@@ -1,0 +1,284 @@
+(￣_,￣ )
+if echo "${ARR[@]}" | grep -w "item_1" &>/dev/null; then
+echo "Found"
+fi
+少女> 儿童 > 少妇 > 老人 > 狗 > 男人
+不疯魔,不成佛
+
+slmgr.vbs -xpr  查看win7激活
+
+^[^ ]*\.tmp$  匹配任意以.tmp结尾的文件
+
+yum install lrzsz #上传下载工具
+/root/.ssh/id_rsa
+yum clean all  清除本地yum缓存
+yum makecache  建立新缓存
+
+CDH5.3开始支持JDK1.8
+
+geoffrey hinton 深度学习和神经网络之父
+对数螺旋线(雅各布 贝努力)  阿基米德螺旋线
+
+
+长安逸动  帝豪GL
+三十三天觑了，离恨天最高，四百四病了，相思病怎熬？
+
+date -d '-1 day'  +'%Y%m%d : %H:%M:%S' 格式化获取linux前一天的日期
+kill -usr1 平滑重启进程
+export HADOOP_USER_NAME=? hadoop自带变量声明所有者用户
+
+
+hadoop dfsadmin -safemode leave
+
+rpm -qa | grep -i mysql
+rpm -e --nodeps xxx
+rpm -ivh MySQL-server-5.5.28-1.linux2.6.x86_64.rpm
+mysql -u root -p
+update user set password=password("new_pass") where user="root";
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'youpassword' WITH GRANT OPTION;
+                     库名.表名 to '用户名'@'IP地址'
+FLUSH PRIVILEGES;
+coalesce(要分组的字段 , "total").... with rollup 求总体聚合
+
+kafka是LinkedIn开发
+
+@Description(name = "deprecation",
+        value = "_FUNC_(date, price) - from the input date string(yyyyMMdd), " + 
+                "returns the deprecation price by computing price and "
+                + "the depreciation rate of the second-hand car.",
+        extended = "Example:\n" +
+                    " > SELECT _FUNC_(date_string, price) FROM src;")
+describe function extended fun_name;
+
+hiveserver2 start &
+netstat -antp
+beeline 
+!connect jdbc:hive2://hadoop-1711-002:10000
+
+
+scala中option 和  either的区别
+
+linux
+0、linux各发行版
+1、CentOS中rpm/yum安装  及配置软件源
+2、属主属组及普通用户
+3、网络相关知识及网卡
+SELinux需要关闭
+
+2888 : 集群间通信端口   3888 : leader选举端口
+
+
+backup-masters hadoop-1707-003 配置默认从master
+
+0.环境搭建spark  ln -sv start-all.sh start-spark-all.sh
+cd spark-2.2.0-bin-hadoop2.6/conf
+cp slaves.template slaves
+vi slaves,写入如下内容
+slave1
+slave2
+cp spark-env.sh.template spark-env.sh
+vi spark-env.sh写入如下内容
+export JAVA_HOME=/usr/local/lib/jdk1.8.0_151
+
+
+spark-shell intelliJ 运行
+./bin/spark-submit \
+  --class org.apache.spark.examples.SparkPi \
+  --master local[8] \
+  /path/to/examples.jar \
+  100
+spark-submit  参数的含义  spark-env.sh  配置 --supervise cluster 把文件放到hdfs
+spark-sql 配置 执行
+  
+1.词频统计 + 排序（scala/java）
+2. spark core  RDD  如何生成sc实例 lineage checkpoint  查看依赖  查看分区器
+3.spark driver exceutor(1G) (spark 运行时) resultTask
+4.持久化策略 级别 
+5.master HA   spark 算子  collect 和  foreach区别 reducebykey(aggregatebykey)比groupbykey效率高
+6.宽依赖  窄依赖  stage切分 shufflemapstage resultstage
+7.DAG(有向无环图)优化 广播变量 累加器
+8.spark shuffle(hashshuffle sortshuffle) partition coalesce
+9.cluster overview  DAGScheduler TaskScheduler
+mapreduce on yarn 与spark on yarn的区别
+
+
+1.sqlcontext udf udaf
+2.读取json
+3.单独显示某列
+4.读取其他数据格式parquet
+5.dataframe
+6.查询添加过滤器
+7.查询分组
+8.分组和聚合函数组合
+9.显示表信息 printSchema
+10.结果信息保存到文件夹
+11.格式化输入输出类型
+12.savemode  保存方式
+13.RDD与dataframe转换 row.gerAs
+14.动态创建dataframe structfield  dataset
+15.读取mysql表  datanucleus.jar异常  sql语句的row_number分组取TOPN
+
+streaming 
+checkpointing streamingcontext receiver(是不是额外的占用线程)
+updatestatusbykey算子(必须要checkpoint)
+预写日志
+spark ml mllib
+
+<dependency>
+	    <groupId>org.apache.kafka</groupId>
+	    <artifactId>kafka-clients</artifactId>
+	    <version>0.10.0.0</version>
+</dependency>
+
+
+vi spark-defaults.conf
+spark.yarn.am.memory            1g
+export SPARK_WORKER_MERMORY=1G
+
+
+SparkSession spark = SparkSession  
+  .builder()  
+  .appName("Java Spark Hive Example")  
+  .master("local[*]")  
+  .config("spark.sql.warehouse.dir", warehouseLocation)  
+  .enableHiveSupport()     //配置spark  兼容hive
+  .getOrCreate();
+
+
+spark.streaming.backpressure.enabled = true 压力反馈
+spark.dynamicAllocation.enabled = true 资源动态分配
+
+flume pull方式发送数据到spark streaming
+spark streaming调优
+
+狄克斯特拉  Dijkstra
+佛洛依德    Floyd
+
+Sigmoid函数 = Logistic
+hbase hfile -p -f path
+scala seq要讲
+/*
+ * IntelliJ Idea常用快捷键
+ * sout --> System.out.println
+ * psvm --> public static void main
+ * iter --> for( : )
+ * fori --> for(int i = 0 ;i > n ; i++)
+ * ctrl + alt + L 格式化代码
+ */
+贝尔宾团队角色理论
+
+Logger.getLogger("").setLevel(Level.WARN)  //指定日志级别
+vi /etc/udev/rules.d/70-persistent-net.rules
+vi /etc/sysconfig/network-scripts/ifcfg-eth0
+service network restart
+chkconfig iptables on --level 35
+
+TYPE=Ethernet       #网卡类型
+DEVICE=eth0         #网卡接口名称
+ONBOOT=yes          #系统启动时是否自动加载
+BOOTPROTO=static    #启用地址协议 --static:静态协议 --bootp协议 --dhcp协议
+IPADDR=192.168.137.101      #网卡IP地址
+NETMASK=255.255.255.0    #网卡网络地址
+GATEWAY=192.168.137.1      #网卡网关地址
+DNS1=192.168.137.1      #网卡DNS地址 
+HWADDR=00:0c:29:af:c4:1f #网卡设备MAC地址
+
+
+ShuffleMapTask-->shuffleManager-->SparkEnv-->SortShuffleManager
+
+vi /etc/inittab 开机状态
+
+yum –y remove postgresql*
+/var/lib/pgsql/data
+?str 查找上一个 /str 查找下一个
+
+TwoPhaseGroupTopN 二次聚合取topN
+** elasticsearch **git   Logstash  Kibana FileBeat
+
+server 120.25.108.11 prefer
+server 202.112.31.197
+server    127.127.1.0     # local clock
+fudge     127.127.1.0 stratum 10
+ntpstat 
+ntpq -p
+tzselect 修改时区  TZ='Asia/Shanghai'; export TZ
+设置前需手动修改时间保证服务器可用
+
+yarn application -kill app_id  用yarn命令结束程序
+sparkLauncher代码提交应用
+MIME : (Multipurpose Internet Mail Extensions)多用途互联网邮件扩展类型
+hdfs dfsadmin -report 查看HDFS块报告  实际时间6小时 dfs.blockreport.intervalMsec
+
+
+## sources config
+a1.sources.r1.type = org.apache.flume.source.kafka.KafkaSource
+a1.sources.r1.channels =c1
+a1.sources.r1.batchSize = 5000
+a1.sources.r1.batchDurationMillis = 2000
+#kafka 节点地址
+a1.sources.r1.kafka.bootstrap.servers =192.168.80.91:9092,192.168.80.92:9092,192.168.80.93:9092
+a1.sources.r1.kafka.topics = event_log
+#这里需要修改
+a1.sources.r1.kafka.consumer.group.id = cbg1705
+
+a1.sinks.k1.type = org.apache.flume.sink.kafka.KafkaSink
+a1.sinks.k1.topic = sx05
+a1.sinks.k1.brokerList = 1609e-3:9092,1609e-4:9092,1609e-5:9092
+a1.sinks.k1.requiredAcks = 1
+a1.sinks.k1.batchSize = 20
+
+<mirror>
+	<id>nexus-aliyun</id>
+	<mirrorOf>*</mirrorOf>
+	<name>Nexus aliyun</name>
+	<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+</mirror>
+
+volatile关键字 linux用户权限  adduser set(get)facl su sudo
+
+1-28----2-17放假 学生 1-24----2-20 21日上课
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
